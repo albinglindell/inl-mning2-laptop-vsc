@@ -152,24 +152,33 @@ header{
 }
 @media screen and (min-width: 600px) {
     header{
+        position: relative;
+        
         .hamburger-container{
             display: none;
         }
         @include flex(row, flex-start, center);
+        .logo{
+            img{
+                border-radius: 100px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+        .nav-box{
+            transform: translateX(15%) ;
+            background: transparent;
+            box-shadow: none;
+            position: absolute;
+            .nav-text-container{
+                @include flex(row, space-between,center );
+                width:60%;
+                top: 0;
+            }
+    
+        }
     }
     
-    .nav-box{
-        transform: translateX(15%) translateY(-43%);
-        background: transparent;
-        box-shadow: none;
-        position: absolute;
-        .nav-text-container{
-            @include flex(row, space-between,center );
-            width:60%;
-            top: 0;
-        }
-
-    }
     .main-content{
         @include flex(column, space, center);
         article{
@@ -180,7 +189,8 @@ header{
                 @include flex(column, center, center);
                 img{
                     width: 400px;
-                    margin: 30px
+                    margin: 30px;
+                    
                 }
             }
             &.article1,&.article3{

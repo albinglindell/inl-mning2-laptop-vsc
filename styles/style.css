@@ -286,6 +286,7 @@ header .hamburger-container.activeBtn .line1::after {
 
 @media screen and (min-width: 600px) {
   header {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -303,15 +304,20 @@ header .hamburger-container.activeBtn .line1::after {
   header .hamburger-container {
     display: none;
   }
-  .nav-box {
-    -webkit-transform: translateX(15%) translateY(-43%);
-            transform: translateX(15%) translateY(-43%);
+  header .logo img {
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+  }
+  header .nav-box {
+    -webkit-transform: translateX(15%);
+            transform: translateX(15%);
     background: transparent;
     -webkit-box-shadow: none;
             box-shadow: none;
     position: absolute;
   }
-  .nav-box .nav-text-container {
+  header .nav-box .nav-text-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
